@@ -11,8 +11,8 @@ body {
   background: linear-gradient(
     231deg,
     #020024 0%,
-    #6843ff 0%,
-    #12800a 90%
+    #00ff2f 0%,
+    #064e01 90%
   );
   
 }
@@ -28,7 +28,7 @@ h2, h3{
     font-weight: 700;
 }
 h2{
-    color: #6dff87;
+    color: #00ff2f;
 }
 h3{
     color: #beffca;
