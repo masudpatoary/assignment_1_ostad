@@ -6,6 +6,7 @@ const calcResultEl = document.getElementById("calc_result");
 
 let calcResult;
 
+// input validation function
 function nagativeValueValidation(inputValue) {
     if(inputValue.value<0 || !inputValue.value){     
         alert(`Please enter valid numbers only`);
@@ -14,12 +15,16 @@ function nagativeValueValidation(inputValue) {
         inputValue.value = inputValue.value
     }
 }
+// input validation function added to first input field
 calcFirstInput.addEventListener('keyup', ()=>{
     nagativeValueValidation(calcFirstInput)
 })
+// input validation function added to second input field
 calcSndInput.addEventListener('keyup', ()=>{
     nagativeValueValidation(calcSndInput)
 })
+
+// simple (+-*/) calculation function
 function result() {
     const calcFirstNum = parseFloat(calcFirstInput.value)
     const calcSndtNum = parseFloat(calcSndInput.value)
@@ -46,7 +51,7 @@ function result() {
 }
 
 
-
+// function to preview result in html
 function showResult(CalcValue) {
     if (CalcValue<0 || CalcValue === NaN || !CalcValue || CalcValue == Infinity) {
         calcResultEl.innerHTML = `<div class="p-2 text-center border rounded border-2 text-danger border-danger">invalid input!</div>`
